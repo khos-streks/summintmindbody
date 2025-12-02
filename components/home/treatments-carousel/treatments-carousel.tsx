@@ -49,7 +49,9 @@ export const TreatmentsCarousel = () => {
 			<Container>
 				<div className='mb-8 max-sm:mb-0 flex flex-col items-center justify-between gap-8'>
 					<div className='flex flex-col gap-4 text-center justify-center items-center px-5'>
-						<h2 className='font-bold text-3xl max-sm:text-xl'>Treatment options</h2>
+						<h2 className='font-bold text-3xl max-sm:text-xl'>
+							Treatment options
+						</h2>
 						<p className='text-sm max-sm:text-xs'>
 							Insert image carousel here - each image clickable and leading to
 							its own treatment page.
@@ -76,10 +78,7 @@ export const TreatmentsCarousel = () => {
 							>
 								<Link className='contents' href={item.link}>
 									<div className='group'>
-										<div
-											className='group transform-gpu relative h-full min-h-108 w-full rounded-[20px] overflow-hidden md:aspect-4/5 lg:aspect-9/16 bg-neutral-900'
-											style={{ boxShadow: '0px 0px 15px 0px #00000040' }}
-										>
+										<div className='group transform-gpu relative h-full min-h-108 w-full rounded-[20px] overflow-hidden md:aspect-4/5 lg:aspect-9/16 bg-neutral-900'>
 											<Image
 												src={item.background}
 												alt={item.title}
@@ -92,7 +91,9 @@ export const TreatmentsCarousel = () => {
 												<div className='mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4 text-white'>
 													{item.title}
 												</div>
-												<div className='line-clamp-2 text-white'>{item.description}</div>
+												<div className='line-clamp-2 text-white'>
+													{item.description}
+												</div>
 											</div>
 										</div>
 									</div>
@@ -114,7 +115,7 @@ export const TreatmentsCarousel = () => {
 					))}
 				</div> */}
 			</div>
-			<div className='hidden shrink-0 gap-2 md:flex '>
+			<div className='shrink-0 gap-2 flex '>
 				<Button
 					variant='ghost'
 					onClick={() => {

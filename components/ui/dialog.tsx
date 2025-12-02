@@ -12,7 +12,7 @@ import {
 	type PropsWithChildren,
 	useContext,
 	useEffect,
-	useState
+	useState,
 } from 'react'
 import { createPortal } from 'react-dom'
 
@@ -26,7 +26,7 @@ function DialogComponent({
 	trigger,
 	children,
 	title,
-	className
+	className,
 }: PropsWithChildren<{
 	trigger: JSX.Element
 	title?: string
@@ -37,24 +37,19 @@ function DialogComponent({
 
 	const openDialog = () => {
 		setIsOpen(true)
-		if (typeof window !== 'undefined') document.body.style.overflow = 'hidden'
+		document.body.style.overflow = 'hidden'
 	}
 
 	const closeDialog = () => {
 		setIsOpen(false)
-		if (typeof window !== 'undefined') document.body.style.overflow = 'auto'
+		document.body.style.overflow = 'auto'
 	}
-
-	useEffect(() => closeDialog(), [pathname])
 
 	return (
 		<DialogContext.Provider value={{ isOpen, closeDialog, openDialog }}>
 			{cloneElement(trigger, { onClick: openDialog })}
 			{createPortal(
-				<DialogContent
-					className={className}
-					title={title}
-				>
+				<DialogContent className={className} title={title}>
 					{children}
 				</DialogContent>,
 				document.body
@@ -64,13 +59,13 @@ function DialogComponent({
 }
 
 export const Dialog = dynamic(() => Promise.resolve(DialogComponent), {
-	ssr: false
+	ssr: false,
 })
 
 function DialogContent({
 	children,
 	className,
-	title
+	title,
 }: PropsWithChildren<{
 	className?: string
 	title?: string
@@ -78,13 +73,14 @@ function DialogContent({
 }>) {
 	const DialogContextValues = useContext(DialogContext)
 
-	if (!DialogContextValues) throw new Error('DialogContent must be used within a <Dialog />')
+	if (!DialogContextValues)
+		throw new Error('DialogContent must be used within a <Dialog />')
 
 	const { closeDialog, isOpen } = DialogContextValues
 
 	const sideVariants: Variants = {
 		hidden: { opacity: 0 },
-		visible: { opacity: 1 }
+		visible: { opacity: 1 },
 	}
 
 	return (
@@ -104,7 +100,7 @@ function DialogContent({
 						exit='hidden'
 						transition={{
 							duration: 0.6,
-							ease: [0.6, -0.05, 0.01, 0.99]
+							ease: [0.6, -0.05, 0.01, 0.99],
 						}}
 					/>
 					<motion.div
@@ -130,7 +126,11 @@ function DialogContent({
 								strokeWidth={1.5}
 							/>
 						</div>
-						<div className={clsx('w-full overflow-y-auto no-scrollbar', className)}>{children}</div>
+						<div
+							className={clsx('w-full overflow-y-auto no-scrollbar', className)}
+						>
+							{children}
+						</div>
 					</motion.div>
 				</div>
 			)}

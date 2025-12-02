@@ -1,16 +1,12 @@
 'use client'
+
 import { useContext, useEffect, useRef, useState } from 'react'
 import { MeshGradient } from '@paper-design/shaders-react'
 import { motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
 import { Logo } from '../ui/logo'
 import clsx from 'clsx'
 import { Dialog, DialogContext } from '../ui/dialog'
 import { ContactUs } from '../shared/contact'
-
-const Hero = dynamic(() => Promise.resolve(Component), { ssr: false })
-
-export default Hero
 
 function HeaderMenu({ className }: { className?: string }) {
 	const dialogContextValues = useContext(DialogContext)
@@ -74,7 +70,7 @@ function ContactButton({ className }: { className?: string }) {
 	)
 }
 
-function Component() {
+export function Hero() {
 	const containerRef = useRef<HTMLDivElement>(null)
 	const [isActive, setIsActive] = useState(false)
 
