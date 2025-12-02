@@ -11,7 +11,6 @@ import {
 	type JSX,
 	type PropsWithChildren,
 	useContext,
-	useEffect,
 	useState,
 } from 'react'
 import { createPortal } from 'react-dom'
