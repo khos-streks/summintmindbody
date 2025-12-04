@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Dialog } from '@/components/ui/dialog'
 import { useContactService } from '@/hooks/useEmailService'
 import { LoaderIcon } from 'lucide-react'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { JSX, useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -13,14 +14,14 @@ export function ContactUs({
 	source = 'default',
 }: {
 	trigger: JSX.Element
-	source?: 'header' | 'footer' | 'hero' | 'cta' | 'default'
+	source?: 'header' | 'footer' | 'hero' | 'cta' | 'extended-cta' | 'default'
 }) {
 	const pathname = usePathname()
 	const { register, handleSubmit, reset } = useForm<{
 		email: string
 		phone: string
 		name: string
-		source: 'header' | 'footer' | 'hero' | 'cta' | 'default'
+		source: any
 		pathname: string
 	}>()
 
@@ -87,18 +88,16 @@ export function ContactUs({
 				<p className='text-xs'>Your information is 100% confidential.</p>
 			</form>
 			{showSuccess && (
-				<div
-					onClick={() => setShowSuccess(false)}
-					className='fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm'
-				>
-					<div className='bg-white rounded-3xl p-10 shadow-2xl text-center max-w-md mx-auto flex flex-col items-center'>
-						<h2 className='text-2xl font-bold mb-4 text-black'>Thank you!</h2>
-						<p className='text-lg text-black mb-6'>
-							Your message has been sent successfully. I will contact you soon.
-						</p>
-						<Button className='w-full' onClick={() => setShowSuccess(false)}>
-							Close
-						</Button>
+				<div className='fixed inset-0 z-50 flex items-center justify-center'>
+					<div className='bg-white p-10 shadow-2xl text-center w-full h-full mx-auto flex flex-col items-center justify-center'>
+						<h2 className='text-3xl font-semibold mb-4 text-black'>
+							Proceed to filling out the documents
+						</h2>
+						<Link href='https://mysummit.formstack.com/forms/hrtintake?specialist=Laura'>
+							<Button className='mt-4 w-[200px] flex items-center gap-2 justify-center disabled:opacity-35 border-black'>
+								Go to the form
+							</Button>
+						</Link>
 					</div>
 				</div>
 			)}

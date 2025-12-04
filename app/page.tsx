@@ -4,6 +4,7 @@ import { HomeFaq } from '@/components/home/home-faq'
 import { TreatmentsCarousel } from '@/components/home/treatments-carousel/treatments-carousel'
 import { Treatments } from '@/components/home/treatments/treatments'
 import { Cta } from '@/components/shared/cta'
+import { ExtendedCta } from '@/components/shared/extended-cta'
 import { FaqJsonld } from '@/components/utility/faq-jsonld'
 import { HOME_FAQ } from '@/data/home-faq.data'
 
@@ -15,7 +16,9 @@ export default function Home() {
 			<Advantages />
 			<Treatments />
 			<Cta />
+			<ExtendedCta />
 			<TreatmentsCarousel />
+			<Cta variant='years' />
 			<HomeFaq />
 		</>
 	)

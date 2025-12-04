@@ -10,7 +10,7 @@ export const useContactService = ({ successCallback }: { successCallback?: () =>
 			email: string
 			phone: string
 			name: string
-			source: 'header' | 'footer' | 'hero' | 'cta' | 'default'
+			source: any
 			pathname: string
 		}) => {
 			const res = await emailService.sendContactEmail(data)

@@ -5,7 +5,7 @@ class EmailService {
 		email: string
 		phone: string
 		name: string
-		source: 'header' | 'footer' | 'hero' | 'cta' | 'default'
+		source: any
 		pathname: string
 	}) {
 		return await api.post<{ ok: boolean; message?: string }>('/contact-me', data)

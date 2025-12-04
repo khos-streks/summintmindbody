@@ -16,9 +16,9 @@ export const FOOTER = {
 	company: {
 		title: 'Company',
 		items: [
-			{ title: 'Home', link: '#' },
+			{ title: 'Home', link: '/' },
 			{ title: 'Treatments', link: '#' },
-			{ title: 'Reviews', link: '#' },
+			{ title: 'Reviews', link: '/testimonials' },
 			{ title: 'About us', link: '#' },
 		],
 	},

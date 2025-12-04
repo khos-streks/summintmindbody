@@ -30,7 +30,7 @@ function HeaderMenu({ className }: { className?: string }) {
 			</a>
 			<a
 				onClick={closeDialog}
-				href='/#review'
+				href='/testimonials'
 				className='text-white/80 hover:text-white text-sm px-3 py-2 rounded-full hover:bg-white/10 transition-all duration-200'
 			>
 				Reviews
