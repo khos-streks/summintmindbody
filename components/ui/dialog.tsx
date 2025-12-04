@@ -121,7 +121,7 @@ function DialogContent({
 								className='cursor-pointer absolute top-10 right-10 max-lg:top-6 max-lg:right-[30px]'
 								onClick={closeDialog}
 								size={24}
-								color='#676767'
+								color='#000'
 								strokeWidth={1.5}
 							/>
 						</div>
