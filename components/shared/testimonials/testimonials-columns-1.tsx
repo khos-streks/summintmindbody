@@ -12,7 +12,7 @@ export type Testimonial = {
 
 export const TestimonialsColumn = (props: {
 	className?: string
-  index?: number
+	index?: number
 	testimonials: Testimonial[]
 }) => {
 	const [isMobile, setIsMobile] = React.useState(false)
@@ -58,7 +58,7 @@ export const TestimonialsColumn = (props: {
 						duration: isMobile ? 3 : 20,
 						repeat: Infinity,
 						ease: 'linear',
-						repeatType: 'mirror',
+						repeatType: isMobile ? 'mirror' : 'loop',
 					}}
 					className={
 						'relative z-0 flex ' +

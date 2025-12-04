@@ -8,9 +8,8 @@ import { FooterLegalList } from './footer-legal-list'
 export function Footer() {
 	return (
 		<footer className='px-3 pb-6'>
-			<Container className='bg-[#0E232D] rounded-3xl px-16 pt-20 pb-5 text-white max-sm:px-10 max-sm:py-5 relative'>
-				<div className='bg-linear-to-b from-black/60 via-black/20 to-transparent absolute top-0 w-full h-1/2 left-0 rounded-t-3xl' />
-				<div className='grid grid-cols-4 justify-between gap-10 max-lg:grid-cols-2 max-sm:grid-cols-1 relative z-1'>
+			<Container className='bg-[#0E232D] rounded-3xl px-16 pt-20 pb-5 text-white max-sm:px-10 max-sm:py-5'>
+				<div className='grid grid-cols-4 justify-between gap-10 max-lg:grid-cols-2 max-sm:grid-cols-1'>
 					<>
 						<Logo
 							height={42}

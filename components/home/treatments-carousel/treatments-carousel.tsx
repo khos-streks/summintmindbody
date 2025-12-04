@@ -86,7 +86,7 @@ export const TreatmentsCarousel = () => {
 												className='absolute inset-0 object-cover rounded-none  object-[0_50%] transition-transform duration-300 group-hover:scale-105 pointer-events-none opacity-90'
 											/>
 
-											<div className='bg-linear-to-t from-black via-black/80 to-transparent absolute bottom-0 w-full h-1/2' />
+											<div className='bg-linear-to-t from-[#0E232D] via-[#0E232D]/80 to-transparent absolute bottom-0 w-full h-1/2' />
 											<div className='absolute inset-x-0 bottom-0 flex flex-col items-start p-6 text-primary md:p-8 rounded-lg'>
 												<div className='mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4 text-white'>
 													{item.title}

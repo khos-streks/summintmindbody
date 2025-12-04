@@ -12,20 +12,19 @@ export const ShuffleHero = () => {
 		<div className='w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-6xl mx-auto'>
 			<div>
 				<span className='block mb-4 text-xs md:text-sm text-primary-foreground font-medium'>
-					Better every day
+					Real results. Real people.
 				</span>
 				<BlurFade inView>
 					<h3 className='text-3xl tracking-tight whitespace-pre-line md:text-6xl font-semibold text-foreground'>
-						Let's change it up a bit.
+						What our patients say
 					</h3>
 				</BlurFade>
 				<p className='text-base md:text-lg text-foreground mb-8'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-					voluptas? Magni quasi et, numquam quaerat
+					Honest feedback from patients who improved their health, energy, confidence, and overall well-being with Summit Health.
 				</p>
 				<ContactUs
 					source='hero'
-					trigger={<FlowButton>Find a class</FlowButton>}
+					trigger={<FlowButton>Start your journey today</FlowButton>}
 				/>
 			</div>
 			<ShuffleGrid />
