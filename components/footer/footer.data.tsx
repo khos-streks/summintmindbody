@@ -19,7 +19,7 @@ export const FOOTER = {
 			{ title: 'Home', link: '/' },
 			{ title: 'Treatments', link: '#' },
 			{ title: 'Reviews', link: '/testimonials' },
-			{ title: 'About us', link: '#' },
+			{ title: 'About us', link: '/about' },
 		],
 	},
 	social: [

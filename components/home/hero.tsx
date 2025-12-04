@@ -7,68 +7,7 @@ import { Logo } from '../ui/logo'
 import clsx from 'clsx'
 import { Dialog, DialogContext } from '../ui/dialog'
 import { ContactUs } from '../shared/contact'
-
-function HeaderMenu({ className }: { className?: string }) {
-	const dialogContextValues = useContext(DialogContext)
-	const closeDialog = dialogContextValues?.closeDialog
-
-	return (
-		<nav className={clsx('flex items-center space-x-2', className)}>
-			<a
-				onClick={closeDialog}
-				href='/#'
-				className='text-white/80 hover:text-white text-sm px-3 py-2 rounded-full hover:bg-white/10 transition-all duration-200'
-			>
-				Home
-			</a>
-			<a
-				onClick={closeDialog}
-				href='/#treatments'
-				className='text-white/80 hover:text-white text-sm px-3 py-2 rounded-full hover:bg-white/10 transition-all duration-200'
-			>
-				Treatments
-			</a>
-			<a
-				onClick={closeDialog}
-				href='/testimonials'
-				className='text-white/80 hover:text-white text-sm px-3 py-2 rounded-full hover:bg-white/10 transition-all duration-200'
-			>
-				Reviews
-			</a>
-			<a
-				onClick={closeDialog}
-				href='/#about'
-				className='text-white/80 hover:text-white text-sm px-3 py-2 rounded-full hover:bg-white/10 transition-all duration-200'
-			>
-				About us
-			</a>
-		</nav>
-	)
-}
-
-function ContactButton({ className }: { className?: string }) {
-	return (
-		<ContactUs
-			source='header'
-			trigger={
-				<div
-					id='gooey-btn'
-					className='relative flex items-center group'
-					style={{ filter: 'url(#gooey-filter)' }}
-				>
-					<button
-						className={clsx(
-							'px-12 py-4 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-[50px] flex items-center z-10',
-							className
-						)}
-					>
-						Contact Us
-					</button>
-				</div>
-			}
-		/>
-	)
-}
+import { Header } from '../layout/header/header'
 
 export function Hero() {
 	const containerRef = useRef<HTMLDivElement>(null)
@@ -184,32 +123,7 @@ export function Hero() {
 				speed={0.2}
 			/>
 
-			<header className='relative z-20 flex items-center justify-between p-6'>
-				<motion.div
-					className='flex items-center group cursor-pointer'
-					whileHover={{ scale: 1.05 }}
-					transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-				>
-					<Logo />
-				</motion.div>
-
-				{/* Navigation */}
-				<HeaderMenu className='max-md:hidden' />
-				<ContactButton className='max-md:hidden' />
-
-				<Dialog
-					className='flex items-center flex-col gap-20'
-					trigger={
-						<button className='md:hidden space-y-2 h-full px-6 max-sm:px-2 max-sm:space-y-1.5 cursor-pointer'>
-							<hr className='w-6 border-white border-[0.5px] bg-white' />
-							<hr className='w-6 border-white border-[0.5px] bg-white' />
-						</button>
-					}
-				>
-					<HeaderMenu className='flex-col gap-20 max-sm:gap-12 max-sm:text-base [&_a]:text-black [&_a]:text-lg [&_a]:font-medium' />
-					<ContactButton className='text-lg font-semibold' />
-				</Dialog>
-			</header>
+			<Header />
 
 			<main className='absolute top-1/2 left-1/2 -translate-1/2 z-20 max-w-2xl max-sm:max-w-none max-sm:w-[90%]'>
 				<div className='text-center flex flex-col items-center'>

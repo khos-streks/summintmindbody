@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 
 export default function TestimonialsColumnsSection() {
 	return (
-		<section className='flex flex-col items-center min-h-screen mb-10'>
+		<section className='flex flex-col items-center min-h-screen mb-10 mt-20'>
 			<div className='container z-10 mx-auto'>
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
