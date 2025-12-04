@@ -5,11 +5,6 @@ import clsx from 'clsx'
 import { AnimatePresence, m, motion, useInView, Variants } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
 
-interface ListSection {
-	title: string
-	items: string[]
-}
-
 export interface TeamMemberData {
 	name: string
 	image: string
@@ -153,7 +148,7 @@ const TeamMember = ({
 					variants={textVariants as Variants}
 					initial='hidden'
 					animate={isInView ? 'visible' : 'hidden'}
-					className={`flex flex-col gap-4 ${
+					className={`flex flex-col gap-4 max-lg:order-2 ${
 						isReversed ? 'lg:text-left' : 'lg:text-left'
 					}`}
 					style={isReversed ? { direction: 'ltr' } : undefined}
