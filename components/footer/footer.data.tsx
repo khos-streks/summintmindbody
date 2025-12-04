@@ -4,13 +4,19 @@ export const FOOTER = {
 	treatments: {
 		title: 'Treatments',
 		items: [
-			{ title: 'Bioidentical Hormone Replacement Therapy', link: '#' },
-			{ title: 'Testosterone Replacement Therapy', link: '#' },
-			{ title: 'Sexual Health', link: '#' },
-			{ title: 'Skin Care', link: '#' },
-			{ title: 'Hair Care', link: '#' },
-			{ title: 'Fat and Weight Loss', link: '#' },
-			{ title: 'Mental and Physical Performance', link: '#' },
+			{
+				title: 'Bioidentical Hormone Replacement Therapy',
+				link: '/treatments/hormone-replacement',
+			},
+			{
+				title: 'Testosterone Replacement Therapy',
+				link: '/treatments/testosterone-replacement',
+			},
+			{ title: 'Sexual Health', link: '/treatments/sexual-health' },
+			{ title: 'Skin Care', link: '/treatments/skin-care' },
+			{ title: 'Hair Care', link: '/treatments/hair-care' },
+			{ title: 'Fat and Weight Loss', link: '/treatments/fat-weight-loss' },
+			{ title: 'Mental and Physical Performance', link: '/treatments/mental-physical-performance' },
 		],
 	},
 	company: {

@@ -237,7 +237,7 @@ const TeamMember = ({
 						</p>
 					</div>
 					<div className='space-y-6 sm:space-y-8'>
-						<p className='whitespace-pre-wrap'>{member.text}</p>
+						<p className='whitespace-pre-wrap wrap-anywhere'>{member.text}</p>
 					</div>
 				</div>
 			</Modal>
