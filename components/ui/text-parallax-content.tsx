@@ -1,10 +1,8 @@
 'use client'
-
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { FiArrowUpRight } from 'react-icons/fi'
 
-const IMG_PADDING = 0
+const IMG_PADDING = 6
 
 export const TextParallaxContent = ({
 	imgUrl,
@@ -22,7 +20,7 @@ export const TextParallaxContent = ({
 				paddingRight: IMG_PADDING,
 			}}
 		>
-			<div className='relative h-[150vh]'>
+			<div className='relative h-screen'>
 				<StickyImage imgUrl={imgUrl} />
 				<OverlayCopy content={content} />
 			</div>
@@ -35,9 +33,8 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
 	const targetRef = useRef(null)
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
-		offset: ['end end', 'end start'],
+		offset: ['start start', 'end start'],
 	})
-
 	const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85])
 	const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
 
@@ -52,7 +49,7 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
 				scale,
 			}}
 			ref={targetRef}
-			className='sticky z-0 overflow-hidden'
+			className='sticky z-0 overflow-hidden rounded-3xl'
 		>
 			<motion.div
 				className='absolute inset-0 bg-neutral-950/70'
@@ -70,7 +67,6 @@ const OverlayCopy = ({ content }: { content: React.ReactNode }) => {
 		target: targetRef,
 		offset: ['start end', 'end start'],
 	})
-
 	const y = useTransform(scrollYProgress, [0, 1], [250, -250])
 	const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0])
 
@@ -87,9 +83,3 @@ const OverlayCopy = ({ content }: { content: React.ReactNode }) => {
 		</motion.div>
 	)
 }
-
-const ExampleContent = () => (
-	<div className='mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12'>
-		
-	</div>
-)
