@@ -17,7 +17,7 @@ export const FOOTER = {
 		title: 'Company',
 		items: [
 			{ title: 'Home', link: '/' },
-			{ title: 'Treatments', link: '#' },
+			{ title: 'Treatments', link: '/treatments' },
 			{ title: 'Reviews', link: '/testimonials' },
 			{ title: 'About us', link: '/about' },
 		],
