@@ -6,9 +6,9 @@ import * as motion from 'framer-motion/client'
 export function AboutHero() {
 	return (
 		<div className='p-1.5'>
-			<AuroraBackground className='rounded-3xl'>
+			<AuroraBackground className='rounded-3xl min-h-[calc(100vh-0.75rem)]!'>
 				<Header className='absolute! w-full' />
-				<div className='flex flex-col items-center justify-center min-h-screen px-8 text-center'>
+				<div className='flex flex-col items-center justify-center min-h-[calc(100vh-0.75rem)] px-8 text-center'>
 					<motion.div
 						className='inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm mb-6 relative border border-white/10'
 						style={{
