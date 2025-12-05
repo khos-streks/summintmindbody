@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { HeaderMenu } from './header-menu'
 import { Dialog } from '@/components/ui/dialog'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 function ContactButton({ className }: { className?: string }) {
 	return (
@@ -39,13 +40,15 @@ export function Header({ className }: { className?: string }) {
 				className
 			)}
 		>
-			<motion.div
-				className='flex items-center group cursor-pointer'
-				whileHover={{ scale: 1.05 }}
-				transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-			>
-				<Logo />
-			</motion.div>
+			<Link href='/'>
+				<motion.div
+					className='flex items-center group cursor-pointer'
+					whileHover={{ scale: 1.05 }}
+					transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+				>
+					<Logo />
+				</motion.div>
+			</Link>
 
 			{/* Navigation */}
 			<HeaderMenu className='max-md:hidden' />

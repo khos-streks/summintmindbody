@@ -65,7 +65,7 @@ export function MultiScreenContent({ treatment }: { treatment: ITreatment }) {
 					imgUrl={screen.main.image}
 					content={
 						<div className='relative w-full h-full flex items-center justify-center'>
-							<h2 className='text-6xl font-bold text-white mb-4 tracking-tight max-sm:text-2xl text-center'>
+							<h2 className='text-6xl font-bold text-white mb-4 tracking-tight max-sm:text-2xl text-center max-w-1/2'>
 								{screen.main.title}
 							</h2>
 						</div>
