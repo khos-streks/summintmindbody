@@ -32,16 +32,17 @@ export function HeaderMenu({
 			? 'text-white/80 hover:text-white hover:bg-white/10'
 			: 'text-black/80 hover:text-black hover:bg-black/5'
 	)
-	const buttonClass = clsx(baseLinkClass, 'flex items-center space-x-2 max-sm:[&_span]:font-medium max-sm:[&_span]:text-lg')
+	const buttonClass = clsx(
+		baseLinkClass,
+		'flex items-center space-x-2 max-sm:[&_span]:font-medium max-sm:[&_span]:text-lg'
+	)
 	const dropdownClass = clsx(
-		'absolute right-0 mt-2 w-56 rounded-md shadow-lg py-2 z-[999999]!',
-		isDark
-			? 'bg-black/95 text-white ring-1 ring-white/5'
-			: 'bg-white text-black ring-1 ring-black/5',
+		'absolute right-0 mt-2 w-64 rounded-md shadow-lg py-2 z-[999999]!',
+		'bg-white text-black ring-1 ring-black/5',
 		{ hidden: !open }
 	)
 	const itemClass = clsx(
-		'block px-4 py-2 text-sm transition-colors',
+		'block px-6 py-3 text-sm transition-colors',
 		isDark ? 'hover:bg-white/10' : 'hover:bg-black/5'
 	)
 
