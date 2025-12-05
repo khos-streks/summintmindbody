@@ -5,7 +5,7 @@ export const MEMBERS: TeamMemberData[] = [
 		name: 'Laura',
 		image: '/team/laura.png',
 		title: 'Co-Founder, Owner, and Head of Operations of Summit Health',
-		text: 'x'.repeat(500),
+		text: 'Where she channels her passion for expanding access to cutting-edge medications and improving the quality of life for every patient she encounters. With a deep commitment to understanding what meaningful living looks like for each individual, Laura prioritizes one guiding principle above all: truly listening. She believes that hearing a patient’s story is the most important step toward removing barriers and helping them live fully on their own terms.\n\nLaura’s career blends scientific rigor with a uniquely human-centered approach. She holds Bachelor’s degrees in both Dance and Exercise Physiology  and and a Master’s in Clinical Research, an unconventional but powerful combination that shapes the way she thinks about the body, healing, and holistic wellbeing. Her work is driven by curiosity, compassion, and a desire to make complex therapies more accessible to those who need them most.\n\nOutside of work, you can usually find Laura spending time with her husband and dogs (two Belgian Malinois named Ryker and Isla), dancing, practicing yoga, or escaping into nature. Whether she’s solving operational challenges or catching a wave, she shows up with the same dedication: grounded, intentional, and committed to helping others live fully and meaningfully.',
 		isReversed: false,
 	},
 	{
