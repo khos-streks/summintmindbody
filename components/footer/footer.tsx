@@ -28,9 +28,6 @@ export function Footer() {
 						/>
 					</div>
 					<div>
-						<h3 className='font-bold text-sm mb-2.5'>
-							{FOOTER.treatments.title}
-						</h3>
 						<FooterLinksList
 							className='flex flex-col gap-2'
 							links={FOOTER.treatments.items.slice(4, 7)}
