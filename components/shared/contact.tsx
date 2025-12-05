@@ -6,8 +6,23 @@ import { useContactService } from '@/hooks/useEmailService'
 import { LoaderIcon } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { JSX, useState } from 'react'
+import { forwardRef, JSX, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { IMaskInput } from 'react-imask'
+
+const TextMaskCustom = forwardRef((props: any, ref) => {
+  const { onChange, ...other } = props;
+  return (
+    <IMaskInput
+      {...other}
+      mask="(#00) 000-0000"
+      definitions={{ "#": /[1-9]/ }}
+      inputRef={ref}
+      onAccept={(value) => onChange({ target: { name: props.name, value } })}
+      overwrite
+    />
+  );
+});
 
 export function ContactUs({
 	trigger,
@@ -58,7 +73,7 @@ export function ContactUs({
 						await contactUs(data)
 					} catch {}
 				})}
-				className='w-[350px] flex items-center mx-auto max-lg:w-full flex-col gap-5 py-10 [&_input]:w-full [&_input]:h-[50px] [&_input]:border [&_input]:border-black/40 [&_input]:rounded-3xl [&_input]:placeholder-black/60 [&_input]:text-sm [&_input]:font-medium [&_input]:px-6 [&_input]:py-3'
+				className='w-[350px] flex items-center mx-auto max-lg:w-full flex-col gap-5 py-10 [&_input]:w-full [&_input]:h-[50px] [&_input]:border [&_input]:border-black/40 [&_input]:rounded-3xl [&_input]:placeholder-black/60 [&_input]:text-sm [&_input]:font-medium [&_input]:px-6 [&_input]:py-3 [&_input]:backdrop-blur-sm'
 			>
 				<input
 					{...register('name')}
@@ -72,7 +87,7 @@ export function ContactUs({
 					required
 					placeholder={'Email'}
 				/>
-				<input
+				<TextMaskCustom
 					type='tel'
 					required
 					{...register('phone')}
@@ -89,12 +104,12 @@ export function ContactUs({
 			</form>
 			{showSuccess && (
 				<div className='fixed inset-0 z-50 flex items-center justify-center'>
-					<div className='bg-white p-10 shadow-2xl text-center w-full h-full mx-auto flex flex-col items-center justify-center'>
-						<h2 className='text-3xl font-semibold mb-4 text-black'>
+					<div className='bg-[#0E232D] p-10 shadow-2xl text-center w-full h-full mx-auto flex flex-col items-center justify-center'>
+						<h2 className='text-3xl font-semibold mb-4 text-white'>
 							Proceed to filling out the documents
 						</h2>
 						<Link href='https://mysummit.formstack.com/forms/hrtintake?specialist=Laura'>
-							<Button className='mt-4 w-[200px] flex items-center gap-2 justify-center disabled:opacity-35 border-black'>
+							<Button className='mt-4 w-[200px] flex items-center gap-2 justify-center disabled:opacity-35 border-white text-white'>
 								Go to the form
 							</Button>
 						</Link>

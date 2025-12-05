@@ -30,8 +30,6 @@ const validateContactData = (contactData: ContactData): ContactErrors => {
 	// phone
 	if (!contactData.phone || contactData.phone.trim().length === 0) {
 		errors.phone = 'Phone number is required!'
-	} else if (!validator.isMobilePhone(contactData.phone, 'any', { strictMode: false })) {
-		errors.phone = 'Invalid phone number format!'
 	}
 
 	return errors

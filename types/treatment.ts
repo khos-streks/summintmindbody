@@ -1,5 +1,6 @@
 export interface ITreatment {
 	slug: string
+	title: string
 	screens: {
 		main: {
 			title: string

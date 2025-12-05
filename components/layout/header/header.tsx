@@ -63,7 +63,7 @@ export function Header({ className }: { className?: string }) {
 					</button>
 				}
 			>
-				<HeaderMenu className='flex-col gap-20 max-sm:gap-12 max-sm:text-base [&_a]:text-black [&_a]:text-lg [&_a]:font-medium' />
+				<HeaderMenu colorScheme='light' className='flex-col gap-20 max-sm:gap-12 max-sm:text-base [&_a]:text-black [&_a]:text-lg [&_a]:font-medium' />
 				<ContactButton className='text-lg font-semibold' />
 			</Dialog>
 		</header>

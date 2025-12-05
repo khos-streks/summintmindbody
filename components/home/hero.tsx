@@ -134,7 +134,7 @@ export function Hero() {
 
 				<Header />
 
-				<main className='absolute top-1/2 left-1/2 -translate-1/2 z-20 max-w-2xl max-sm:max-w-none max-sm:w-[90%]'>
+				<main className='absolute top-1/2 left-1/2 -translate-1/2 z-0 max-w-2xl max-sm:max-w-none max-sm:w-[90%]'>
 					<div className='text-center flex flex-col items-center'>
 						<motion.div
 							className='inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm mb-6 relative border border-white/10'

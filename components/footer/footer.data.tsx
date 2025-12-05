@@ -23,7 +23,6 @@ export const FOOTER = {
 		title: 'Company',
 		items: [
 			{ title: 'Home', link: '/' },
-			{ title: 'Treatments', link: '/treatments' },
 			{ title: 'Reviews', link: '/testimonials' },
 			{ title: 'About us', link: '/about' },
 		],
@@ -31,14 +30,14 @@ export const FOOTER = {
 	social: [
 		{
 			title: 'Instagram',
-			link: 'instagram.com',
+			link: 'https://www.instagram.com/mysummit.health/',
 			icon: (
 				<Image src='/instagram.svg' width={24} height={24} alt='Instagram' />
 			),
 		},
 		{
 			title: 'Facebook',
-			link: 'facebook.com',
+			link: 'https://www.facebook.com/Summit.Reachyourpeak/',
 			icon: <Image src='/facebook.svg' width={24} height={24} alt='facebook' />,
 		},
 	],

@@ -3,6 +3,7 @@ import { ITreatment } from '@/types/treatment'
 export const TREATMENTS: ITreatment[] = [
 	{
 		slug: 'sexual-health',
+		title: 'Sexual Health',
 		screens: [
 			{
 				main: {
@@ -103,6 +104,7 @@ export const TREATMENTS: ITreatment[] = [
 	},
 	{
 		slug: 'hormone-replacement',
+		title: 'Bioidentical Hormone Replacement Therapy',
 		screens: [
 			{
 				main: {
@@ -209,6 +211,7 @@ export const TREATMENTS: ITreatment[] = [
 	},
 	{
 		slug: 'skin-care',
+		title: 'Skin Care',
 		screens: [
 			{
 				main: {
@@ -315,6 +318,7 @@ export const TREATMENTS: ITreatment[] = [
 	},
 	{
 		slug: 'hair-care',
+		title: 'Hair Care',
 		screens: [
 			{
 				main: {
@@ -403,6 +407,7 @@ export const TREATMENTS: ITreatment[] = [
 	},
 	{
 		slug: 'testosterone-replacement',
+		title: 'Testosterone Replacement Therapy',
 		screens: [
 			{
 				main: {
@@ -498,6 +503,7 @@ export const TREATMENTS: ITreatment[] = [
 	},
 	{
 		slug: 'fat-weight-loss',
+		title: 'Fat and Weight Loss',
 		screens: [
 			{
 				main: {
@@ -593,6 +599,7 @@ export const TREATMENTS: ITreatment[] = [
 	},
 	{
 		slug: 'mental-physical-performance',
+		title: 'Mental and Physical Performance',
 		screens: [
 			{
 				main: {
